@@ -9,8 +9,7 @@ import frc.util.PID.Gains;
 import frc.util.pathGenerator.Path;
 import frc.util.pathGenerator.drive_controls.DriveControl;
 import frc.util.pathGenerator.drive_controls.EncoderAndNavxDriveControl;
-import frc.robot.subsystems.DriveSystem;
-
+import frc.util.DriveSystem;
 public class AutoGenerator extends SequentialCommandGroup {
     private Gains gains;
     private DriveControl dc;

@@ -1,6 +1,6 @@
 package frc.robot.commands.auto;
 
-import frc.robot.subsystems.DriveSystem;
+import frc.util.DriveSystem;
 import frc.util.SuperNavX;
 import frc.util.commands.TurnInPlace;
 import frc.util.pathGenerator.commandAuto.AutoGenerator;

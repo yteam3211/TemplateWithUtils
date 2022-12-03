@@ -1,7 +1,6 @@
 package frc.util.pathGenerator.drive_controls;
 
-import frc.robot.subsystems.DriveSystem;
-
+import frc.util.DriveSystem;
 /**
  * Add your docs here.
  */

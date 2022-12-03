@@ -2,8 +2,7 @@ package frc.util.pathGenerator.drive_controls;
 
 import frc.robot.Constants;
 import frc.util.pathGenerator.Path;
-import frc.robot.subsystems.DriveSystem;
-
+import frc.util.DriveSystem;
 /**
  * @author Matan Steinmetz
  */
