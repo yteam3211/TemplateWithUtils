@@ -25,7 +25,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   
-  // static public final SuperNavX navx = new SuperNavX();
+  static public final SuperNavX navx = new SuperNavX();
 
 
   //Autonomus

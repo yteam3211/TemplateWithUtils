@@ -15,4 +15,5 @@ package frc.robot;
 public final class Constants {
 
     // public static final ...
+    public static final float ROBOT_WIDTH = 1; // in meters
 }
