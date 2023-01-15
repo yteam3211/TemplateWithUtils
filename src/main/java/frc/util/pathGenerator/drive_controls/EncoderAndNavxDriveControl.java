@@ -1,8 +1,7 @@
 package frc.util.pathGenerator.drive_controls;
 
 import frc.util.SuperNavX;
-import frc.robot.subsystems.DriveSystem;
-
+import frc.util.DriveSystem;
 /**
  * @author Matan Steinmetz
  */

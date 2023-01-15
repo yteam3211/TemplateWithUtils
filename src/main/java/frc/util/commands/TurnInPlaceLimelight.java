@@ -5,7 +5,7 @@
 package frc.util.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.DriveSystem;
+import frc.util.DriveSystem;
 import frc.util.vision.Limelight;
 
 public class TurnInPlaceLimelight extends CommandBase {
