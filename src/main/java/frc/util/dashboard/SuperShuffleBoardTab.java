@@ -9,6 +9,7 @@ package frc.util.dashboard;
 
 import java.util.HashMap;
 
+import edu.wpi.first.networktables.GenericEntry;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInLayouts;
@@ -21,7 +22,7 @@ import edu.wpi.first.wpilibj.shuffleboard.WidgetType;
  */
 public class SuperShuffleBoardTab {
     protected final ShuffleboardTab tab;
-    protected final HashMap<String, NetworkTableEntry> keys = new HashMap<>();
+    protected final HashMap<String, GenericEntry> keys = new HashMap<>();
 
     public SuperShuffleBoardTab(final String name) {
         tab = Shuffleboard.getTab(name);
@@ -98,27 +99,27 @@ public class SuperShuffleBoardTab {
 
     public double getFromDashboard(final String key, final double defaultValue) {
         if (keys.containsKey(key))
-            if (keys.get(key).getValue().isValid())
-                if (keys.get(key).getValue().isDouble())
-                    return keys.get(key).getValue().getDouble();
+            if (keys.get(key).isValid())
+                if (keys.get(key).get().isDouble())
+                    return keys.get(key).get().getDouble();
 
         return defaultValue;
     }
 
     public String getFromDashboard(final String key, final String defaultValue) {
         if (keys.containsKey(key))
-            if (keys.get(key).getValue().isValid())
-                if (keys.get(key).getValue().isDouble())
-                    return keys.get(key).getValue().getString();
+            if (keys.get(key).get().isValid())
+                if (keys.get(key).get().isDouble())
+                    return keys.get(key).get().getString();
 
         return defaultValue;
     }
 
     public boolean getFromDashboard(final String key, final boolean defaultValue) {
         if (keys.containsKey(key))
-            if (keys.get(key).getValue().isValid())
-                if (keys.get(key).getValue().isDouble())
-                    return keys.get(key).getValue().getBoolean();
+            if (keys.get(key).get().isValid())
+                if (keys.get(key).get().isDouble())
+                    return keys.get(key).get().getBoolean();
 
         return defaultValue;
     }

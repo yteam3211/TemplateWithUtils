@@ -9,6 +9,7 @@ package frc.util.vision;
 
 import java.util.HashMap;
 
+import edu.wpi.first.networktables.GenericEntry;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -47,7 +48,7 @@ public class Limelight extends SubsystemBase {
   protected double angle = 0, distance = 0;
 
   private ShuffleboardTab tab;
-  private HashMap<String, NetworkTableEntry> keys = new HashMap<>();
+  private HashMap<String, GenericEntry> keys = new HashMap<>();
 
   private Limelight(Builder builder) {
     this.limelightTable = NetworkTableInstance.getDefault().getTable(builder.table);
