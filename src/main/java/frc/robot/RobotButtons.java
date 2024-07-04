@@ -17,6 +17,6 @@ public class RobotButtons {
 
     public void loadButtons(ExampleSubsystem exampleSubsystem) {
         // Triggers active
-        ExampleButton.whileActiveOnce(new ExampleCommand(exampleSubsystem));
+        ExampleButton.whileTrue(new ExampleCommand(exampleSubsystem));
     }
 }

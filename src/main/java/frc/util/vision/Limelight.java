@@ -15,7 +15,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.util.vision.commands.LimelightCameraChangeModeCommand;
@@ -69,12 +69,12 @@ public class Limelight extends SubsystemBase {
     this.cameraDistanceFromCenterRobot = builder.cameraDistanceFromCenterRobot;
     this.high = builder.high;
     tab = Shuffleboard.getTab(builder.table);
-    CommandBase ledOn = new LimelightLEDChangeModeCommand(this, limelightLEDMode.kOn);
-    CommandBase ledOff = new LimelightLEDChangeModeCommand(this, limelightLEDMode.kOff);
+    Command ledOn = new LimelightLEDChangeModeCommand(this, limelightLEDMode.kOn);
+    Command ledOff = new LimelightLEDChangeModeCommand(this, limelightLEDMode.kOff);
 
-    CommandBase view = new LimelightCameraChangeModeCommand(this, limelightCameraMode.kView);
-    CommandBase vision = new LimelightCameraChangeModeCommand(this, limelightCameraMode.kVision);
-    // CommandBase USB = new LimelightCameraChangeModeCommand(this,
+    Command view = new LimelightCameraChangeModeCommand(this, limelightCameraMode.kView);
+    Command vision = new LimelightCameraChangeModeCommand(this, limelightCameraMode.kVision);
+    // Command USB = new LimelightCameraChangeModeCommand(this,
     // limelightCameraMode.kUSB);
     setStreamMode(limelightStreamMode.kPiPSecondary);
 
@@ -330,7 +330,7 @@ public class Limelight extends SubsystemBase {
     kStandard, kPiPMain, kPiPSecondary
   }
 
-  private class LimelightUpdateValue extends CommandBase {
+  private class LimelightUpdateValue extends Command {
     protected Limelight limelight;
 
     public LimelightUpdateValue(Limelight limelight) {
